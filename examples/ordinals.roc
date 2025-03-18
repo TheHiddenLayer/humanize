@@ -9,7 +9,7 @@ import humanize.Ordinal
 main! = |_|
     List.range({ start: At(1), end: At(50) })
     |> List.map Ordinal.humanize
-    |> Str.join_with(", ")
+    |> Str.join_with ", "
     |> Stdout.line!
 
 # This program's outputs:
