@@ -4,11 +4,11 @@ app [main!] {
 }
 
 import cli.Stdout
-import humanize.Ordinals
+import humanize.Ordinal
 
 main! = |_|
     List.range({ start: At(1), end: At(50) })
-    |> List.map Ordinals.humanize
+    |> List.map Ordinal.humanize
     |> Str.join_with(", ")
     |> Stdout.line!
 

@@ -1,1 +1,1 @@
-package [Bytes, Ordinals] {}
+package [Byte, Ordinal, Number] {}

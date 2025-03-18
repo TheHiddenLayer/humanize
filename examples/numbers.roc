@@ -4,9 +4,14 @@ app [main!] {
 }
 
 import cli.Stdout
-import humanize.Byte
+import humanize.Number
 
 main! = |_|
-    computerized = 1239871231
-    humanized = Byte.humanize(computerized)
-    Stdout.line! humanized
+    List.range({ start: At(999999), end: At(1000001) })
+    |> List.map Number.humanize
+    |> Str.join_with(", ")
+    |> Stdout.line!
+
+# This program's outputs:
+#
+# 999,999, 1,000,000, 1,000,001
