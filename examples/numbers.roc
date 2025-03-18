@@ -9,7 +9,7 @@ import humanize.Number
 main! = |_|
     List.range({ start: At(999999), end: At(1000001) })
     |> List.map Number.humanize
-    |> Str.join_with(", ")
+    |> Str.join_with ", "
     |> Stdout.line!
 
 # This program's outputs:
